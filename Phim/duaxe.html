@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hob & Shaw</title>
+	<style type="text/css">
+	#bao{
+			width: 1200px;
+			height: auto;
+			margin: 0 auto;
+		}
+		/*tiêu đề*/
+		header{
+			width: 100%;
+			height: 100px;
+			background-color: #2c3e50;
+		}
+		#tenweb{
+			padding: 10px 10px 0 30px;
+			font-size: 45px;
+			font-weight: bold;
+			color:#eeeeee;
+			float: left;
+			
+		}
+		.tenweb2{
+			color:#cccc00;
+			font-size: 18px;
+		}
+	/*thanh menu*/
+		nav{
+			float: left;
+			width: 100%;
+			height: 80px;
+			background-color: black ;
+			font-size: 20px;	
+
+		}
+		nav ul li{
+			display: inline-block;
+			text-align: center;
+			padding-top: 8PX;
+			padding-left: 18px;
+			position: relative;
+		}
+		nav ul li a{
+			text-decoration:none;
+			color: yellow;
+			background-color: #336699;
+			padding: 10px;
+			border-radius: 10px;
+
+		}
+		nav ul li a:hover{
+			background-color:#3399cc;
+			opacity: 1;
+			color: white;
+		}
+		nav .thothut{
+			width:150px;
+			height:auto;
+			font-size:18px;
+			z-index: 90;
+		}
+		.thothut{
+			position: absolute;
+			top: 40px;
+			right: -10px;
+			display:none;
+		}
+		nav li:hover .thothut{
+			display: block;
+		}
+
+		#tim{
+			padding: 6px;
+			border-radius: 10px;
+		}
+		/*thanh menu phải*/
+		aside{
+			float:left;
+			width: 30%;
+			height: 880px;
+			background-color: #222;
+		}
+		#phimhot{
+			width: 95%;
+			height: 30px;
+			margin: 10px auto;
+			background-color: #669999;
+			padding-top:5px;
+			text-align: center;
+			font-size: 22px;
+			color:white;
+			border-radius: 5px 5px;
+		}
+		#khungtrai{
+			width: 95%;
+			height: 700px;
+			padding:5px;
+			columns: 1;
+			text-align: center;
+
+		}
+		.inkhung{
+			width: 100%;
+			height: 160px;
+			background-color: #669999;
+			border-radius: 5px 5px;
+			margin-top: 10px;
+
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			text-align:center;
+		}
+		#inkhungtrai{
+			border: 2px solid #eeeeee;
+			width:35%;
+			height: 156px;
+			text-align: center;
+			background-color: black;
+			border-radius: 5px 5px;
+
+		}
+		#inkhungtrai img {
+			transition: all 1s ease;
+			/*-webkit-transition: all 1s ease;
+			-moz-transition: all 1s ease;
+			-o-transition: all 1s ease;*/
+			}
+		#inkhungtrai img:hover {
+		transform: scale(1.5,1.5);
+		/*-webkit-transform: scale(1.5,1.5);
+		-moz-transform: scale(1.5,1.5);
+		-o-transform: scale(1.5,1.5);
+		-ms-transform: scale(1.5,1.5);*/
+		}
+		#inkhungphai{
+			text-align: left;
+			padding: 10px;
+			line-height: 30px;
+		}
+		/*themmoi */
+		#inkhungphai a{
+			text-decoration: none;
+			color:black;
+
+		}
+		#inkhungphai a:hover{
+			color:#ffcc33;
+			opacity: 1;	
+		}
+		.sao{
+			color:#ffcc33;
+		}
+		/*nội dụng chính*/
+		section{
+			float:left;
+			width:70%;
+			height:880px;
+			background-color: #222;
+		}
+		#oxem{
+			float: left;
+			width: 98%;
+			height: 360px;
+			margin: 5px;
+			padding: 5px;
+			
+		}
+		#othongtin{
+			float: left;
+			margin: 5px;
+			width: 98%;
+			height: 400px;
+			color: #dddddd;
+			border-top: 0.5px solid #555;
+			border-left: 0.5px solid #555;
+		}
+		#othongtin p{
+			margin:10px;
+			line-height: 1.5;
+		}
+		.tenp{
+				margin: 8px;
+				font-size: 25px;
+				font-family: Open Sans;
+				color:#dacb46;
+				}			
+		.noidungtt{
+			font-size: 15px;
+			color:#dddddd;
+			font-family: arial;
+		}
+		.chutt{
+			font-size: 18px;
+			color:#9999ff;
+			font-family: arial;
+		}
+		#quaylai button{
+			color: white;
+			margin: 10px;
+			background-color: #000066;
+			border-radius:5px 5px;
+			border:none;
+			font-size: 15px;
+			padding: 10px 13px;
+		}
+		/*thanhphim gần đây*/
+		article{
+			float: left;
+			width: 100%;
+			height: auto;
+		}
+
+		#khungtong{
+			width: 100%;
+			height: 450px;
+			background-color: black;
+			margin:5px auto;
+		}
+		#khungphim{
+			width: 98%;
+			height: 350px;
+			background-color: #222;
+			border-radius: 5px 5px;
+			margin-top: 5px ;
+			margin-left: 10px;
+
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			text-align:center;
+			column-count: 5;
+		}
+		#tenphim a{
+			margin-top: 5px;
+			text-decoration: none;
+			color:black;
+		}
+		#tenphim a:hover{
+			color:white;
+			opacity: 1;
+		}
+		.inkhungphim{
+			width: 205px;
+			height: 320px;
+			background-color: #669999;
+			margin: 10px auto;
+			border-radius: 4px 4px;
+
+			columns: 1;
+		}
+		#anhphim{
+			width: 200px;
+			height: 260px;
+			border: 1px solid gray;
+			margin: 2px auto;
+		}
+		@keyframes move{
+			from{left: 18px; }
+			to{left: 900px;}
+		}
+		.tieude{
+			width: 240px;
+			font-size: 25px;
+			font-weight: bold;
+			color:yellow;
+			border-radius: 25px 25px;
+			background-color: #336699;
+			margin-top: 25px;
+			margin-bottom: 10px;
+			padding:10px 10px;
+			margin-left:18px;
+			text-align: center;
+			border: 2px bold black;
+			/*chuyendong*/
+			animation-name: move;
+			animation-duration: 20s;
+			animation-iteration-count: infinite;
+			position: relative;
+		}
+		/*kêt thúc*/
+		footer{
+			float: left;
+			width: 100%;
+			height: 180px;
+			background-color: #336699;
+
+		}
+		.ketthuc{
+				width: 35%;
+				height:100%;
+				font-size:15px;
+				color:white;
+				text-align:center;
+				margin: 10px auto;
+			}
+			.ketthuc ul li{
+					padding-left: 40px;
+					list-style-type: none;
+					text-align:left;
+					line-height: 22px;
+			}
+	</style>
+</head>
+<body>
+	<div id="bao">
+	<header>
+		<img src="logo6.png" height="90px" width="90px">
+		<div id="tenweb">
+					<p style="margin: 0px; font-family: Cooper Black;" >PhimOnline</p>
+					<p class="tenweb2" style="margin: 0px; font-family: Matura MT Script Capitals ;" >.COM</p>
+		</div>
+	</header>
+	<nav>
+			<div id="menutren">
+				<ul style="none">
+				<li ><input type="search" id="tim" placeholder="Search:  Tên phim, diễn viên..." size="30px" align="center"></li>
+				 <li><a href="#">Phim Mới</a>
+				 	<ul class="thothut">
+				 		<li><a href="#">Phim T9</a></li>
+				 			<li><a href="#">Phim T8</a></li>
+				 				<li><a href="#">Phim T7</a></li>
+				 					<li><a href="#">Phim T6</a></li>
+				 	</ul>
+				 </li>
+					<li><a href="#">Phim Lẻ</a>
+						<ul class="thothut">
+				 		<li><a href="#">2019</a></li>
+				 			<li><a href="#">2018</a></li>
+				 				<li><a href="#">2017</a></li>
+				 					<li><a href="#">Năm.</a></li>
+				 		</ul>
+				 </li>
+						<li><a href="#">Phim Bộ</a>
+						<ul class="thothut">
+				 		<li><a href="#">Trung</a></li>
+				 			<li><a href="#">Việt</a></li>
+				 				<li><a href="#">Nhật</a></li>
+				 					<li><a href="#">Mỹ</a></li>
+				 		</ul>
+				 	</li>
+					<li><a href="#">Thể Loại</a>
+						<ul class="thothut">
+				 			<li><a href="#">Hoạt Hình</a></li>
+				 			<li><a href="#">Hài Hước</a></li>
+				 				<li><a href="#">Hành Động</a></li>
+				 					<li><a href="#">Kinh Dị</a></li>
+				 		</ul>
+				 	</li>
+						<li><a href="#">Quốc Gia </a>
+								<ul class="thothut">
+						 		<li><a href="#">America</a></li>
+						 			<li><a href="#">Trung Quốc</a></li>
+						 				<li><a href="#">Nhật Bản</a></li>
+						 					<li><a href="#">Việt Nam</a></li>
+						 		</ul>
+						</li>
+						<li><a href="#">Phim Chiếu Rạp </a>
+							<ul class="thothut">
+						 		<li><a href="#">America</a></li>
+						 		<li><a href="#">Trung Quốc</a></li>
+						 			<li><a href="#">Nhật Bản</a></li>
+						 				<li><a href="#">Việt Nam</a></li>
+						 	</ul>
+						</li>			
+				</ul>
+			</div>
+	</nav>
+	<section>
+		<div id="oxem">
+			<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HZ7PAyCDwEg?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div id="othongtin">
+			<p class="tenp">QUÁ NHANH QUÁ NGUY HIỂM: HOBBS & SHAW</p>
+			<p class="noidungtt">Lượt xem: 158,028</p>
+			<p class="chutt">Thông Tin </p>
+			<p class="noidungtt">Quốc gia: Mỹ<br>
+			Năm sản xuất: 2019<br>
+			Chất lượng: Bluray<br>
+			Âm thanh: Vietsub<br>
+			Điểm IMDB: 6.5/10 (119,834 bình chọn)<br>
+			Thể loại: Hành Động,  Phiêu Lưu Phiêu Lưu,  Tình Cảm, Kịch Tính</p>
+			<p class="noidungtt">Sau 8 phim với phần doanh thu chạm mức 5 tỉ đô la Mỹ toàn cầu, giờ đây thương hiệu Fast & Furious sẽ trở lại với một phần ngoại truyện hoàn toàn độc lập với sự tham gia của Dwayne Johnson trong vai Luke Hobbs và Jason Statham trong vai Deckard Shaw trong Hobbs & Shaw.</p>
+		</div>
+		<div id="quaylai">
+			<button type="button" onclick="quay_lai_trang_truoc()">Quay lại ↽</button>
+
+		  <script>
+		      function quay_lai_trang_truoc(){
+		          history.back();
+		      }
+		  </script>
+		</div>
+	</section>
+	<aside>
+		<div id="phimhot" >
+				<b>Phim hot trong tuần</b>
+		</div>
+		<div id="khungtrai">
+			<div class="inkhung">
+				<div id="inkhungtrai">
+					<img src="anh6.jpg" width="116" height="156">
+				</div>
+				<div id="inkhungphai">
+					<b><a href="haitac.html">Vui hải tăc: Stampede</a></b><br>
+					<b class="sao">★★★★★</b><br>
+					<b>9540 lượt xem</b>
+				</div>
+			</div>
+			<div class="inkhung">
+				<div id="inkhungtrai">
+					<img src="anh7.jpg" width="116" height="156">
+				</div>
+				<div id="inkhungphai">
+					<b><a href="conan.html">Conan: Movie 23</a></b><br>
+					<b class="sao">★★★★☆</b><br>
+		
+					<b>6041 lượt xem</b>
+				</div>
+			</div>
+			<div class="inkhung">
+				<div id="inkhungtrai">
+					<img src="anh8.jpg" width="116" height="156">
+				</div>
+				<div id="inkhungphai">
+					<b><a href="chuhe.html">Chú hề ma quái: Chapter 2</a></b><br>
+					<b class="sao">★★★★★</b><br>
+					<b>7890 lượt xem</b>
+				</div>
+			</div>
+			<div class="inkhung">
+				<div id="inkhungtrai">
+					<img src="anh2.jpg" width="116" height="156">
+				</div>
+				<div id="inkhungphai">
+					<b><a href="duaxe.html">Hobbs and Shaw</a></b><br>
+					<b class="sao">★★★☆☆</b><br>
+					<b>4500 lượt xem</b>
+				</div>
+			</div>
+		</div>
+	</aside>
+	<article>
+		<div id="khungtong">
+			<br>
+			<<p class="tieude">Phim Mới Cập Nhật</p>
+			<div id="khungphim">
+				<div class="inkhungphim">
+					<div id="anhphim">
+						<img src="anh11.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="kisinhtrung.html">Kí Sinh Trùng<a></b>
+					</div>
+				</div>
+				<div class="inkhungphim">
+					<div id="anhphim">
+						<img src="anh5.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="thanden.html">Thần đèn: Aladin<a></b>
+					</div>
+				</div>
+				<div class="inkhungphim">
+					<div id="anhphim">
+						<img src="anh14.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="godzilla.html">Godzilla</a></b>
+					</div>
+				</div>
+				<div class="inkhungphim">
+					<div id="anhphim">
+						<img src="anh16.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="nguoica.html">Aquamen</a> </b>
+					</div>
+				</div>
+				<div class="inkhungphim">
+					<div id="anhphim">
+						<img src="anh10.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="chim.html">Angry Bird</a></b>
+					</div>
+				</div>
+			</div>
+	</article>
+	<footer>
+		<div class="ketthuc">
+			<h2 style="color: #f7941d">XEM PHIM TẠI phimonline.com</h2>
+			<p>Góp ý - Liên hệ:</p>
+			<ul>
+				<li>👍: fb.com/thong.pirates</li>
+				<li>📷: thoong69</li>
+				<li>📧: maithong1999@gmail.com</li>
+			</ul>
+		</div>	
+	</footer>
+	</div>
+</body>
+</html>

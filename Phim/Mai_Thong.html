@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài Tiểu Luân Của Thông</title>
+	<link rel="stylesheet" type="text/css" href="css_thong.css">
+	
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		 var stt= 0;
+		// khi sử dụng hàm này chúng ta sẽ lấy được ảnh cuối cùng và ảnh đầu tiên
+			 startImg = parseInt($("img.slide:first").attr("stt"));
+			 endImg = parseInt($("img.slide:last").attr("stt"));
+		// khi vào trang thì ta có hành động next thì sẽ duyệt qua tất cả ảnh img
+			 $("img.slide").each(function(){
+			 if ($(this).is(':visible')){ 
+			 stt = parseInt($(this).attr("stt"));
+				  }
+			  }) 
+		 //thêm sự kiện click vào next và hàm được xử lí khi ấn nút next
+		 $("#next").click(function(){
+			next = ++stt; 
+			if(next == endImg){
+			stt= (startImg-1);
+		 }
+			 $("img.slide").hide();
+				 $("img.slide").eq(next).show(); 
+		 $("li.slide").removeClass('active'); // khi mình next thì li có hiệu ứng class sẽ bị mất
+		 $("li.slide").eq(next).addClass('active');//tương tự khi next thì addClass vào li tiếp theo
+		 });
+		 //thêm sự kiện click vào prev và hàm được xử lí khi ấn nút prev
+		 $("#prev").click(function(){ 
+		 if(stt == 0){
+		 stt= (endImg+1);
+		 }
+		 prev = --stt; 
+		 $("img.slide").hide();
+		 $("img.slide").eq(prev).show(); 
+		 $("li.slide").removeClass('active');
+		 $("li.slide").eq(prev).addClass('active');
+		 });
+		 // đặt thời gian tự chuyển ảnh
+		 setInterval(function(){
+		 $("#next").click();},4000);
+		});
+	</script>
+	</script>
+</head>
+<body>
+	<div id="bao">
+	<header>
+			<img src="logo6.png" height="90px" width="90px">
+		<div id="tenweb">
+					<p style="margin: 0px; font-family: Cooper Black;" >PhimOnline</p>
+					<p class="tenweb2" style="margin: 0px; font-family: Matura MT Script Capitals ;" >.COM</p>
+		</div>
+			<div id="ngonngu">
+				<select>
+					<option>Tiếng Việt</option>
+					<option>English</option>
+					<option>中文</option>
+				</select>
+			</div>
+			<div id="thongtin">
+				<div class="tk"><a href="dangnhap.html">ĐĂNG NHẬP</a>
+				</div>
+				<div class="tk"> <a href="dang_ki.html">ĐĂNG KÍ</a></div> 
+			</div>	
+	</header>
+	<nav>
+			<div id="menutren">
+				<ul style="none">
+				<li ><input type="search" id="tim" placeholder="Search:  Tên phim, diễn viên..." size="30px" align="center"></li>
+				 <li><a href="phim_1.html">Phim Mới</a></li>
+				 	<ul class="thothut">
+				 		<li><a href="phim_1.html">Phim T9</a></li>
+				 			<li><a href="phim_1.html">Phim T8</a></li>
+				 				<li><a href="phim_1.html">Phim T7</a></li>
+				 					<li><a href="phim_1.html">Phim T6</a></li>
+				 	</ul>
+				 </li>
+					<li><a href="phim_2.html">Phim Lẻ</a>
+						<ul class="thothut">
+				 		<li><a href="phim_2.html">2019</a></li>
+				 			<li><a href="phim_2.html">2018</a></li>
+				 				<li><a href="phim_2.html">2017</a></li>
+				 					<li><a href="phim_2.html">Năm.</a></li>
+				 		</ul>
+				 </li>
+						<li><a href="phim_3.html">Phim Bộ</a>
+						<ul class="thothut">
+				 		<li><a href="#">Trung</a></li>
+				 			<li><a href="#">Việt</a></li>
+				 				<li><a href="#">Nhật</a></li>
+				 					<li><a href="#">Mỹ</a></li>
+				 		</ul>
+				 	</li>
+					<li><a href="phim_1.html">Thể Loại</a>
+						<ul class="thothut">
+				 			<li><a href="phim_3.html">Hoạt Hình</a></li>
+				 			<li><a href="phim_3.html">Hài Hước</a></li>
+				 				<li><a href="phim_3.html">Hành Động</a></li>
+				 					<li><a href="phim_3.html">Kinh Dị</a></li>
+				 		</ul>
+				 	</li>
+						<li><a href="phim_3.html">Quốc Gia </a>
+								<ul class="thothut">
+						 		<li><a href="#">America</a></li>
+						 			<li><a href="#">Trung Quốc</a></li>
+						 				<li><a href="#">Nhật Bản</a></li>
+						 					<li><a href="#">Việt Nam</a></li>
+						 		</ul>
+						</li>
+						<li><a href="#">Phim Chiếu Rạp </a>
+							<ul class="thothut">
+						 		<li><a href="#">America</a></li>
+						 		<li><a href="#">Trung Quốc</a></li>
+						 			<li><a href="#">Nhật Bản</a></li>
+						 				<li><a href="#">Việt Nam</a></li>
+						 		</ul>
+							</li>
+									
+				</ul>
+			</div>
+	</nav>
+	<section >
+		<div id="khung2">
+			<div id="slideanh">
+				  <a href="#" id ="next"> <b style="line-height: bold"> ▶ </b> </a>
+				  <a href="#" id = "prev"><b style="line-height: bold"> ◀ </b></a>
+				<b id="anh">
+				 <img class="slide" src="anh19.jpg" stt="0"  / >
+				 <img class="slide" src="anh18.jpg" stt="0" style="display: none;"/>
+				 <img  class="slide" src="anh20.jpg" stt="2" style="display: none"/>
+				 <img class="slide" src="anh21.jpg" stt="3" style="display: none"/>
+				 <img class="slide" src="anh22.jpg" stt="4" style="display: none"/>
+				</b>
+				<div id="khunganhul">
+				 <div class="active" >
+				 <ul>
+				 <li  class="slide">1</li>
+				 <li class="slide" >2</li>
+				 <li class="slide">3</li>
+				 <li class="slide">4</li>
+				 <li class="slide">5</li>
+ 				</ul>
+				</div>
+				</div>
+			</div>
+			<div id="trailer">
+				<div class="video" >
+					<iframe src="https://youtube.com/embed/TcMBFSGVi1c?autoplay=1" width="475px" height="280px" frameborder="0"></iframe>
+
+				</div>
+				<div class="phude">
+					<b id="endgame">AVENGER: ENDGAME</b><br><span id="noidung">
+					<p >Biệt Đội Siêu Anh Hùng 4: Tàn Cuộc (Avengers 4: Endgame) ra mắt vào tháng 4/2019 sẽ giải quyết triệt để những khúc mắc đã vạch ra suốt 22 bộ phim trước đó của Vụ trụ điện ảnh Marvel.<br>
+					Sau sự kiện Thanos làm cho một nửa vũ trụ tan biến và khiến cho biệt đội Avengers thảm bại, những siêu anh hùng sống sót phải tham gia trận chiến cuối cùng trong Avengers: Endgame.</p></span>
+				</div>
+			</div>
+		</div>	
+	</section>
+	<aside>
+		<div id="phimhot" >
+				<b>Phim hot trong tuần</b>
+		</div>
+		<div id="khungtrai">
+			<div class="inkhung">
+				<div id="inkhungtrai">
+					<img src="anh6.jpg" width="116" height="156">
+				</div>
+				<div id="inkhungphai">
+					<b><a href="haitac.html">Vui hải tăc: Stampede</a></b><br>
+					<b class="sao">★★★★★</b><br>
+					<b>9540 lượt xem</b>
+				</div>
+			</div>
+			<div class="inkhung">
+				<div id="inkhungtrai">
+					<img src="anh7.jpg" width="116" height="156">
+				</div>
+				<div id="inkhungphai">
+					<b><a href="conan.html">Conan: Movie 23</a></b><br>
+					<b class="sao">★★★★☆</b><br>
+		
+					<b>6041 lượt xem</b>
+				</div>
+			</div>
+			<div class="inkhung">
+				<div id="inkhungtrai">
+					<img src="anh8.jpg" width="116" height="156">
+				</div>
+				<div id="inkhungphai">
+					<b><a href="chuhe.html">Chú hề ma quái: Chapter 2</a></b><br>
+					<b class="sao">★★★★★</b><br>
+					<b>7890 lượt xem</b>
+				</div>
+			</div>
+			<div class="inkhung">
+				<div id="inkhungtrai">
+					<img src="anh2.jpg" width="116" height="156">
+				</div>
+				<div id="inkhungphai">
+					<b><a href="duaxe.html">Hobbs and Shaw</a></b><br>
+					<b class="sao">★★★☆☆</b><br>
+					<b>4500 lượt xem</b>
+				</div>
+			</div>
+		</div>
+	</aside>
+	<article>
+		<div id="khungtong">
+			<br>
+			<p class="tieude">Phim Mới Cập Nhật</p>
+			<div id="khungphim">
+				<div class="inkhungphim">
+					<div id="anhphim">
+						<img src="anh11.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="kisinhtrung.hlml">Kí Sinh Trùng<a></b>
+					</div>
+				</div>
+				<div class="inkhungphim">
+					<div id="anhphim">
+						<img src="anh5.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="#">Thần đèn: Aladin<a></b>
+					</div>
+				</div>
+				<div class="inkhungphim">
+					<div id="anhphim">
+						<img src="anh14.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="#">Godzilla</a></b>
+					</div>
+				</div>
+				<div class="inkhungphim">
+					<div id="anhphim">
+						<img src="anh16.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="#">Aquamen</a> </b>
+					</div>
+				</div>
+				<div class="inkhungphim">
+					<div id="anhphim">
+						<img src="anh10.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="#">Angry Bird</a></b>
+					</div>
+				</div>
+			</div>
+			<p class="tieude">Phim Dành Cho Bạn</p>
+			<div id="khungphim2">
+				<div class="inkhungphim2">
+					<div id="anhphim">
+						<img src="anh1.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="#">Spider man<br>Xa nhà</b></a>
+					</div>
+				</div>
+				<div class="inkhungphim2">
+					<div id="anhphim">
+						<img src="anh4.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="#">Avenger<br>EndGame</a></b>
+					</div>
+				</div>
+				<div class="inkhungphim2">
+					<div id="anhphim">
+						<img src="anh15.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="#">Avenger<br>Infinity war</a></b>
+					</div>
+				</div>
+				<div class="inkhungphim2">
+					<div id="anhphim">
+						<img src="anh17.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b><a href="#">Black Panther<br>Chiến binh báo đen</a></b>
+					</div>
+				</div>
+				<div class="inkhungphim2">
+					<div id="anhphim">
+						<img src="anh12.jpg" width="200px" height="260px">
+					</div>
+					<div id="tenphim">
+						<b>Thor 3<br> Ranarok</b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+	<footer>
+		<div class="ketthuc">
+			<h2 style="color: #f7941d">XEM PHIM TẠI phimonline.com</h2>
+			<div id="mycanvas">
+				<canvas id="khung" width="300px" height="150px"  style=" border: 2px solid #336699">
+				</canvas>
+			<script type="text/javascript">
+			var goku= document.getElementById("khung").getContext("2d");
+			/*chữ M*/
+			goku.beginPath();
+			goku.moveTo(10,130);
+			goku.lineTo(10,10);
+			goku.lineTo(65,45);
+			goku.lineTo(130,10);
+			goku.lineTo(130,130);
+			goku.lineWidth="10";
+			goku.strokeStyle="#ccff99";
+			goku.lineCap = "round";
+			goku.stroke();
+			//chữ T
+			goku.beginPath();
+			goku.moveTo(160,10);
+			goku.lineTo(290,10);
+			goku.moveTo(225,10);
+			goku.lineTo(225,130);
+			goku.lineWidth="10";
+			goku.strokeStyle="#ccff99";
+			goku.lineCap = "round";
+			goku.stroke();
+			</script>
+			</div>
+
+			<p>Góp ý - Liên hệ:</p>
+			<ul>
+				<li>👍: fb.com/thong.pirates</li>
+				<li>📷: thoong69</li>
+				<li>📧: maithong1999@gmail.com</li>
+			</ul>
+		</div>
+	</footer>
+</div>
+</body>
+</html>

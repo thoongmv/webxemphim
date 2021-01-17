@@ -1,0 +1,423 @@
+#bao{
+			width: 1200px;
+			height: auto;
+			margin: 0 auto;
+		}
+		/*thanh tiêu đề*/
+		header{
+
+			
+			width: 100%;
+			height: 100px;
+			background-color: #2c3e50;
+		}
+		 #tenweb{
+			padding: 10px 10px 0 30px;
+			font-size: 45px;
+			font-weight: bold;
+			color:#eeeeee;
+			float: left;
+			text-shadow: 0px 0px 20px #ff0000;
+			
+		}
+		.tenweb2{
+			color:#cccc00;
+			font-size: 18px;
+			text-shadow: 0px 0px 15px white;
+
+		}
+		#thongtin{
+			padding:10px 0 0 20px;
+			padding-top: 30px;
+			float: right;
+			padding-right:20px;
+
+		}
+		#ngonngu{
+			padding-top:40px ;
+			float: right;
+			padding-right:20px;
+		}
+		#thongtin {
+			
+		}
+		.tk {
+			background-color: #ff0000;
+			margin: 6px 6px;
+			padding: 5px;
+			float: right;
+			border-radius:5px 5px; 
+			border-bottom: 0.5px solid yellow; 
+		}
+		.tk a{
+			font-weight: bold;
+			font-size: 15px;
+			padding: 2px 3px;
+			margin: 10px 10px;
+			text-decoration: none;
+			color: white;
+		}
+		.tk a:hover{
+			opacity: 1;
+			color:#3399ff;	
+			
+		}
+		/*thanh tùy chon menu*/
+		nav{
+			float: left;
+			width: 100%;
+			height: 80px;
+			background-color: black ;
+			font-size: 20px;	
+
+		}
+		nav ul li{
+			display: inline-block;
+			text-align: center;
+			padding-top: 8PX;
+			padding-left: 18px;
+			position: relative;
+		}
+		nav ul li a{
+			text-decoration:none;
+			color: yellow;
+			background-color: #336699;
+			padding: 10px;
+			border-radius: 10px;
+
+		}
+		nav ul li a:hover{
+			background-color:#3399cc;
+			opacity: 1;
+			color: white;
+		}
+		nav .thothut{
+			width:150px;
+			height:auto;
+			font-size:18px;
+			z-index: 90;
+		}
+		.thothut{
+			position: absolute;
+			top: 40px;
+			right: -10px;
+			display:none;
+		}
+		nav li:hover .thothut{
+			display: block;
+		}
+
+		#tim{
+			padding: 6px;
+			border-radius: 10px;
+		}
+		
+		aside{
+			float:left;
+			width: 30%;
+			height: 750px;
+			background-color: #222;
+		}
+		/*Khu vực aside phim hot*/
+		#phimhot{
+			width: 95%;
+			height: 30px;
+			margin: 10px auto;
+			background-color: #669999;
+			padding-top:5px;
+			text-align: center;
+			font-size: 22px;
+			color:white;
+			border-radius: 5px 5px;
+		}
+		#khungtrai{
+			width: 95%;
+			height: 700px;
+			padding:5px;
+			columns: 1;
+			text-align: center;
+
+		}
+		.inkhung{
+			width: 100%;
+			height: 160px;
+			background-color: #669999;
+			border-radius: 5px 5px;
+			margin-top: 10px;
+
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			text-align:center;
+		}
+		/*Hover phóng to ảnh*/
+		#inkhungtrai{
+			border: 2px solid #eeeeee;
+			width:35%;
+			height: 156px;
+			text-align: center;
+			background-color: black;
+			border-radius: 5px 5px;
+		}
+		#inkhungtrai img {
+			transition: all 1s ease;
+			/*-webkit-transition: all 1s ease;
+			-moz-transition: all 1s ease;
+			-o-transition: all 1s ease;*/
+			}
+		#inkhungtrai img:hover {
+		transform: scale(1.2,1.2);
+		/*-webkit-transform: scale(1.5,1.5);
+		-moz-transform: scale(1.5,1.5);
+		-o-transform: scale(1.5,1.5);
+		-ms-transform: scale(1.5,1.5);*/
+		}
+		#inkhungphai{
+			text-align: left;
+			padding: 10px;
+			line-height: 30px;
+		}
+		#inkhungphai a{
+			text-decoration: none;
+			color:black;
+
+		}
+		#inkhungphai a:hover{
+			color:#ffcc33;
+			opacity: 1;
+			
+		}
+		.sao{
+			color:#ffcc33;
+		}
+		section{
+			float:left;
+			width:70%;
+			height:750px;
+			background-color: #222;
+
+		}
+		#khung2{
+			border: 1px solid white;
+			width: 98%;
+			height: 720px;
+			margin: 10px auto;
+		}
+		/*Khung trung tâm*/
+		#slideanh{
+			border: 1.5px solid #336699;
+			width: 98%;
+			height:400px;
+			margin: 10px auto;
+			position: relative;
+		}
+		/*CSS cho slide*/
+		#anh img {
+		 width: 805px;
+		 height: 400px;
+		}
+		#next{
+		 text-transform: uppercase;
+		 position: absolute;
+		 top:200px;
+		 right: 10px;
+		 text-decoration: none;
+		 color: yellow; 
+		 }
+		#prev{
+		 text-transform: uppercase;
+		 position: absolute;
+		 top:200px;
+		 left: 10px;
+		 text-decoration: none;
+		 color: yellow;
+		 }
+		 /*themtuhieu*/
+		  #khunganhul{
+		 margin: 0px;
+		 padding:0px;
+		 list-style: none;
+		 position: absolute;
+		 left:100px;
+		 bottom: 0px;
+		  color: white;
+		 }
+		 #khunganhul ul li {
+		 display: inline;
+		 margin-left: 5px;
+		 background: #336699;
+		 padding: 5px;
+		 padding-left: 9px;
+		 padding-right: 9px;
+		 font-weight: bold;
+		 border-radius: 12px;
+		 }
+		ul li.active{
+		 background: red;
+		 color: red;
+		 }
+		#trailer{
+			margin: 0 auto;
+			width: 98%;
+			height: 280px;
+			margin-top: 10px;
+			
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		.video{
+			width: 59%;
+			height: 100%;
+			float: left;
+			
+		}
+		.phude{
+			width: 39%;
+			float: left;
+			border-left: 1px solid #336699;
+			margin-left: 10px;
+			color: #dddddd;
+			text-align: left;
+			padding-top: 10px;
+			padding-left: 5px;
+			background-color: black;
+		}
+		#endgame{
+
+			color: #dacb46;
+			font-size: 24px;
+			margin-top: 5px;
+		}
+		#noidung{
+			font-family: tahoma;
+			font-style: italic;
+		}
+		/*Khu vực các bộ phim tuyển chọn*/
+		article{
+			float: left;
+			width: 100%;
+			height: auto;
+		}
+		#khungtong{
+			width: 100%;
+			height: 900px;
+			background-color: black;
+			margin:5px auto;
+		}
+		#khungphim{
+			width: 98%;
+			height: 350px;
+			background-color: #222;
+			border-radius: 5px 5px;
+			margin-top: 5px ;
+			margin-left: 10px;
+
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			text-align:center;
+			column-count: 5;
+		}
+
+		.inkhungphim{
+			width: 205px;
+			height: 320px;
+			background-color: #669999;
+			margin: 10px auto;
+			border-radius: 4px 4px;
+			columns: 1;
+			transition: all 1s ease;
+		}
+		/*Hover phóng to ảnh*/
+		.inkhungphim :hover{
+			transform: scale(1.12,1.12);
+		}	
+
+		}
+		#anhphim{
+			width: 200px;
+			height: 260px;
+	 		border: 1px solid gray;
+			margin: 2px auto;
+		}
+		#tenphim a{
+			margin-top: 5px;
+			text-decoration: none;
+			color:black;
+		}
+		#tenphim a:hover{
+			color:white;
+			opacity: 1;
+		}
+		#khungphim2{
+			width: 98%;
+			height: 350px;
+			background-color: #222;
+			border-radius: 5px 5px;
+			margin-top: 5px;
+			margin-left: 10px;
+
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			text-align:center;
+			column-count: 5;
+		}
+		
+		.inkhungphim2{
+			width: 205px;
+			height: 320px;
+			margin: 10px auto;
+			background-color: #669999;
+			border-radius: 4px 4px;
+			columns: 1;
+			transition: all 1s ease;
+		}
+		.inkhungphim2 :hover{
+			transform: scale(1.12,1.12);
+		}
+		@keyframes move{
+			from{left: 18px; }
+			to{left: 900px;}
+		}
+		.tieude{
+			width: 240px;
+			font-size: 25px;
+			font-weight: bold;
+			color:yellow;
+			border-radius: 25px 25px;
+			background-color: #336699;
+			margin-top: 25px;
+			margin-bottom: 10px;
+			padding:10px 10px;
+			margin-left:18px;
+			text-align: center;
+			border: 2px bold black;
+			/*chuyendong*/
+			animation-name: move;
+			animation-duration: 20s;
+			animation-iteration-count: infinite;
+			position: relative;
+		}
+		/*Khu vực kết thúc*/
+		footer{
+			float: left;
+			width: 100%;
+			height: 350px;
+			background-color: #336699;
+		}
+		.ketthuc{
+				width: 35%;
+				height:100%;
+				font-size:15px;
+				color:white;
+				text-align:center;
+				margin: 10px auto;
+			}
+			.ketthuc ul li{
+					padding-left: 40px;
+					list-style-type: none;
+					text-align:left;
+					line-height: 22px;
+			}

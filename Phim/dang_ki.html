@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng Kí</title>
+	<style type="text/css">
+		#bao{
+			width: 1200px;
+			height: auto;
+			margin: 0 auto;
+		}
+		header{
+			width: 100%;
+			height: 100px;
+			background-color: #2c3e50;
+		}
+		#tenweb{
+			padding: 10px 10px 0 30px;
+			font-size: 45px;
+			font-weight: bold;
+			color:#eeeeee;
+			float: left;
+			
+		}
+		.tenweb2{
+			color:#cccc00;
+			font-size: 18px;
+		}
+		section{
+			width: 100%;
+			height: 390px;
+			background-image: url(anh29.jpg); 
+		}
+		#khungdk{
+			width: 80%;
+			height: 370px;
+			margin:0 auto;
+			padding-top: 10px;
+			font-family:arial;
+			background-color: #222;
+			text-align: center;
+		}
+		#thongtin{
+			font-weight: bold;
+			font-size: 30px;
+			color:yellow;
+		}
+		.trai{
+			float:left;
+			line-height: 2.0;
+			font-size:22px;
+			color:#eeeeee;
+			text-align: right;
+			margin: 8px 5px 5px 240px;
+		}
+		.phai{
+			float:left;
+			line-height: 2.0;
+			font-size:22px;
+			text-align: left;
+			margin: 4px 5px 5px 20px;
+			color:white;
+		}
+		.phai input{
+			padding-left: 5px;
+			font-size: 18px;
+			color:white;
+			background-color: #222;
+			border: none; 
+			border-bottom: 2px solid white;
+		}
+		.phai button{
+			font-size: 20px;
+			padding: 5px;
+			border: none;
+			background-color: #ff0000;
+			color:#dddddd;
+		}
+		#Hienthi1{
+				margin: 5px;
+				font-size: 15px;
+				font-style: bold;
+				font-family: tahoma;
+				color:red;
+		}
+		#Hienthi2{
+				margin: 5px;
+				font-size: 15px;
+				font-style: bold;
+				font-family: tahoma;
+				color:red;
+		}
+		footer{
+			float: left;
+			width: 100%;
+			height: 180px;
+			background-color: #336699;
+		}
+		.ketthuc{
+				width: 35%;
+				height:100%;
+				font-size:15px;
+				color:white;
+				text-align:center;
+				margin: 10px auto;
+			}
+			.ketthuc ul li{
+					padding-left: 40px;
+					list-style-type: none;
+					text-align:left;
+					line-height: 22px;
+			}
+	</style>
+<script type="text/javascript">
+	function	kiemtra(){
+		tendn = document.getElementById("tendn").value;
+		pw = document.getElementById("pw").value;
+		if(tendn=="")
+		document.getElementById("Hienthi1").innerHTML="bạn cần nhập tên đăng nhập";
+		else
+			if (pw=="")
+			document.getElementById("Hienthi2").innerHTML="bạn cần nhập mật khẩu";
+
+	}
+</script>
+</head>
+<body>
+	<div id="bao">
+	<header>
+		<img src="logo6.png" height="90px" width="90px">
+		<div id="tenweb">
+					<p style="margin: 0px; font-family: Cooper Black;" >PhimOnline</p>
+					<p class="tenweb2" style="margin: 0px; font-family: Matura MT Script Capitals ;" >.COM</p>
+		</div>
+	</header>
+	<section>
+	<div id="khungdk">
+	<form name="form" action = "">
+		<fieldset>
+			<legend id="thongtin">THÔNG TIN ĐĂNG KÍ</legend>
+		<div class="trai">
+		<label>Tên đăng nhập: <br>
+		<label>Mật khẩu: </label><br>
+		<label>Email: </label><br>
+		<label>Ngày sinh: </label><br>
+		<label>Giới tính: </label><br>
+		<label>Màu yêu thích: </label>
+		</div>
+		<div class="phai">
+		 <input type="text" id="tendn" ><span id="Hienthi1"></span><br>
+		 <input type="password" id="pw"><span id="Hienthi2"></span><br>
+		 <input type="email" id="mail"><br>
+		 <input type="date" id="ns"><br>
+		<input type="radio" name="genner" value="">Nam &nbsp;&nbsp;
+		<input type="radio" name="genner" value="">Nữ<br>
+		<input type="color" id="mau" value="red"><br>
+		<button type="button" onclick="kiemtra();">Đăng kí </button>
+		</div>
+	</fiedset>
+	</form>
+	<div id="Hienthi"></div>
+	<div>
+	</section>
+	<footer>
+		<div class="ketthuc">
+			<h2 style="color: #f7941d">XEM PHIM TẠI phimonline.com</h2>
+			<p>Góp ý - Liên hệ:</p>
+			<ul>
+				<li>👍: fb.com/thong.pirates</li>
+				<li>📷: thoong69</li>
+				<li>📧: maithong1999@gmail.com</li>
+			</ul>
+		</div>
+	</footer>
+</div>
+</body>
+</html>
